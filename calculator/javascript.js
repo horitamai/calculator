@@ -1,13 +1,13 @@
 total = 0;
 num = "0";
 point = "";
-sym = "";
+symbol = "";
 
 function calc_run(btn) {
 	if (!isNaN(btn)) {
-	if (sym == "=") {
+	if (symbol == "=") {
 		total = 0;
-		sym = "";
+		symbol = "";
 	}
 	if (!isNaN(point)) {
 	if (num == "0") {
@@ -21,12 +21,12 @@ function calc_run(btn) {
 	document.getElementById("output").innerHTML = num;
 	} else {
 		if (!isNaN(point)) {
-		total = eval(total + sym + num);
+		total = eval(total + symbol + num);
 		num = "0";
 		document.getElementById("output").innerHTML = total;
 	}
-	sym = btn;
+	symbol = btn;
 	}
-	document.getElementById("type").innerHTML = sym;
+	document.getElementById("type").innerHTML = symbol;
 	point = btn;
 }
